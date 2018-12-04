@@ -26,10 +26,14 @@ class App {
          
     } 
 
-     function p_url(){
-         $url = rtrim($_GET['url']);
+    function p_url(){
+         $url = parse_url($_GET['url']);
+         $url = $url['path'];
+         $utl = rtrim($url, '/');
          $url = filter_var($url, FILTER_SANITIZE_URL);
          $url = explode('/', $url);
          return $url;
      }
+
+    
 }
