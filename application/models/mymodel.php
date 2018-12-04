@@ -4,7 +4,7 @@ class mymodel extends Model {
    
   
      function getdata(){ 
-       return $this->db->get('blogs')->result();
+       return $this->db->get('blogs',0,5)->result();
     }
 
       function getnum(){ 

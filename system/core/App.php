@@ -1,6 +1,6 @@
 <?php
 class App {
-    protected $controller = 'home';
+    protected $controller = DEFAULT_CONTROLLER;
     protected $method = 'index';
     protected $params = [];
     function __construct(){
@@ -9,7 +9,9 @@ class App {
             $this->controller = $url[0];
             unset($url[0]);
            
-         } 
+         } else {
+            echo "";
+         }
           require_once "application/controllers/".$this->controller.".php";
          $this->controller = new $this->controller();
          if(isset($url[1])){

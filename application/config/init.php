@@ -16,6 +16,7 @@ $init_load = array_values($init_load);
 require_once "config.php";
 require_once "database.php";
 define('BASE_URL', $config['base_url']);
+define('DEFAULT_CONTROLLER', $config['routes']);
 define('HOST', $db['connection']['host']);
 define('USER', $db['connection']['user']);
 define('PASS', $db['connection']['password']);
