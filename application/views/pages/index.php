@@ -10,7 +10,7 @@
 					<th>Tools</th>
 				</tr>
 				<?php
-					foreach ($data['sql'] as $key ) {
+					foreach ($sql as $key ) {
 				?>
 					<tr>
 						<td><?php  echo $key->id; ?></td>

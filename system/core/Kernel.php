@@ -2,6 +2,9 @@
 class Kernel{
 
     public function view($v, $data = []){
+        foreach ($data as $key => $value) {
+            $$key =$value;
+        }
         if(file_exists('application/views/'.$v.'.php')){
             require_once 'application/views/'.$v.'.php';
         } 
