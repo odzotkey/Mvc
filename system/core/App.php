@@ -31,7 +31,7 @@ class App {
     function p_url(){
          $url = parse_url($_GET['url']);
          $url = $url['path'];
-         $utl = rtrim($url, '/');
+         $url = rtrim($url, '/');
          $url = rtrim($url, '/');
          $url = filter_var($url, FILTER_SANITIZE_URL);
          $url = explode('/', $url);
